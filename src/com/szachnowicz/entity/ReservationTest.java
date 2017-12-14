@@ -13,7 +13,7 @@ public class ReservationTest {
 
     @Before
     public void setUp() throws Exception {
-         rest = new Reservation();
+        rest = new Reservation();
         rest.setClientId(0);
         rest.setFlightDate(new Date());
         rest.setFlightId(100);
