@@ -8,7 +8,6 @@ import java.util.Set;
 
 public class ReservationRepository implements Repository<Reservation> {
     public ReservationRepository() {
-
         if (reservationSet == null) {
             reservationSet = new HashSet<>();
         }
@@ -24,6 +23,8 @@ public class ReservationRepository implements Repository<Reservation> {
 
     @Override
     public void delete(Reservation item) {
+        reservationSet.remove(item);
+
 
     }
 
@@ -42,6 +43,20 @@ public class ReservationRepository implements Repository<Reservation> {
         System.out.println("Reservation aded ");
         System.out.println(item.toString());
     }
+
+
+    public Reservation getById(long id ){
+        for (Reservation reservation : reservationSet) {
+            if (reservation.getId() == id) {
+                return reservation;
+            }
+
+        }
+        return null;
+    }
+
+
+
 
 
 }

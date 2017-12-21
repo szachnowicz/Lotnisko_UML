@@ -14,6 +14,19 @@ public class ReservationService {
     }
 
 
+    public ReservationRepository getRepository() {
+        return repository;
+    }
+
+
+    public void removeReservationByReservationId(long reservationId) {
+        Reservation byId = repository.getById(reservationId);
+        repository.delete(byId);
+    }
+
+
+
+
     public void addReservation(long idClient, BigDecimal price, String flightDate, long flightId )
     {
         Reservation reservation = new Reservation();
@@ -24,7 +37,6 @@ public class ReservationService {
         reservation.setFlightDateFromString(flightDate);
 
         repository.add(reservation);
-
         System.out.println("reservtion Adeed");
 
     }
