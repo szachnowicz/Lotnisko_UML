@@ -13,7 +13,7 @@ public class Main {
 
         Main main = new Main();
         System.out.println("OPCJE");
-        System.out.println( " 1 : Dodaj rezerwacje");
+        System.out.println("1 : Dodaj rezerwacje");
         System.out.println("2 : Usun Rezerwacje");
         System.out.println();
         System.out.println();
@@ -25,15 +25,12 @@ public class Main {
         {
             System.out.println("Wybierz opjce");
             int choose = scanner.nextInt();
-
             if(choose ==1 )
             {
                 main.dispalyAddingReservation(reservationService);
             }
 
-
         }
-
     }
 
     private void dispalyAddingReservation(ReservationService reservationService) {

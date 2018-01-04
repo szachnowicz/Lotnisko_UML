@@ -35,7 +35,6 @@ public class ReservationService {
         reservation.setPrice(price);
         reservation.setFlightId(flightId);
         reservation.setFlightDateFromString(flightDate);
-
         repository.add(reservation);
         System.out.println("reservtion Adeed");
 
